@@ -8,6 +8,7 @@ import com.backend.hotel.repositories.HotelRepository;
 import com.backend.hotel.repositories.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -27,18 +28,18 @@ public class BookingService {
     HotelRepository hotelRepository;
 
 
-    //TODO:set role
+    @PreAuthorize("hasAuthority('HOTEL_MANAGER') or hasAuthority('ADMIN')")
     public List<Booking> getAllBookings(){
         return bookingRepository.findAll();
     }
 
-    //TODO:set role
-    public Booking getBookingById(Long bookingId){
-        return bookingRepository.findById(bookingId).orElseThrow(() -> new EntityNotFoundException("Booking not found for the given id"));
-    }
+//    @PreAuthorize("hasAuthority('HOTEL_MANAGER') or hasAuthority('ADMIN')")
+//    public Booking getBookingById(Long bookingId){
+//        return bookingRepository.findById(bookingId).orElseThrow(() -> new EntityNotFoundException("Booking not found for the given id"));
+//    }
 
 
-    //TODO:set role
+    //Customers must be able to book rooms using the service
     public Booking bookHotel(Long hotelId){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User userObj = (User) authentication.getPrincipal();
@@ -69,7 +70,7 @@ public class BookingService {
     }
 
 
-    //TODO:set role
+    @PreAuthorize("hasAuthority('HOTEL_MANAGER') or hasAuthority('ADMIN')")
     public void cancelBooking(Long bookingId){
         Booking currBooking = bookingRepository.findById(bookingId).orElseThrow(() -> new EntityNotFoundException("Booking not found with given id"));
 
