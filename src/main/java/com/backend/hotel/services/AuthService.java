@@ -10,7 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
+@Service
 public class AuthService {
 
     @Autowired
@@ -42,8 +44,6 @@ public class AuthService {
         userRepository.save(user);
 
         String jwtToken = jwtService.generateToken(user);
-//        userRepository.save(user);  //Already saving the user above
-
         return AuthResponse.builder()
                 .accessToken(jwtToken)
                 .build();
