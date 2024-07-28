@@ -1,5 +1,6 @@
 package com.backend.hotel.config;
 
+import com.backend.hotel.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
