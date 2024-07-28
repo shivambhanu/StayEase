@@ -40,7 +40,10 @@ public class SecurityConfig {
                 .anyRequest()
                 .authenticated());
 
+        //Do not save the state, instead authenticate with token
         http.sessionManagement(configurer -> configurer.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+
+        //Invoke JWT before the traditional authentication
         http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
