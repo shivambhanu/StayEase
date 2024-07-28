@@ -51,7 +51,7 @@ public class BookingService {
 
         //check if there are rooms available
         int currTotalRoomsAvailable = currHotel.getTotalAvailableRooms();
-        if(currTotalRoomsAvailable > 0){
+        if(currTotalRoomsAvailable < 1){
             throw new IllegalStateException("Rooms not available in this hotel");
         }
 
