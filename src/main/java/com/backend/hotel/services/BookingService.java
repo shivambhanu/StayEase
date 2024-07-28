@@ -8,12 +8,10 @@ import com.backend.hotel.repositories.HotelRepository;
 import com.backend.hotel.repositories.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cglib.core.Local;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
-import java.awt.print.Book;
 import java.time.LocalDate;
 import java.util.List;
 
