@@ -1,5 +1,7 @@
 package com.backend.hotel.config;
 
+import com.backend.hotel.services.JWTService;
+import com.backend.hotel.services.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

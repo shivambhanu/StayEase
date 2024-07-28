@@ -1,5 +1,6 @@
 package com.backend.hotel.services;
 
+import com.backend.hotel.controllers.exchanges.request.AuthRequest;
 import com.backend.hotel.controllers.exchanges.request.RegisterRequest;
 import com.backend.hotel.controllers.exchanges.response.AuthResponse;
 import com.backend.hotel.models.User;
@@ -7,6 +8,7 @@ import com.backend.hotel.models.enums.Role;
 import com.backend.hotel.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 public class AuthService {
@@ -41,6 +43,18 @@ public class AuthService {
 
         String jwtToken = jwtService.generateToken(user);
 //        userRepository.save(user);  //Already saving the user above
+
+        return AuthResponse.builder()
+                .accessToken(jwtToken)
+                .build();
+    }
+
+
+    public AuthResponse login(AuthRequest request){
+        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
+
+        User user = userRepository.findByEmail(request.getEmail());
+        String jwtToken = jwtService.generateToken(user);
 
         return AuthResponse.builder()
                 .accessToken(jwtToken)
