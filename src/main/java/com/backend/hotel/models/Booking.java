@@ -29,4 +29,7 @@ public class Booking {
     private LocalDate bookingDate;
 
     private LocalDate checkOutDate;
+
+    @Column(nullable = false)
+    private boolean bookingStatus;
 }
