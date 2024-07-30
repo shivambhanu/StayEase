@@ -10,8 +10,5 @@ COPY build/libs/hotel-0.0.1-SNAPSHOT.jar app.jar
 # Expose the port the application runs on
 EXPOSE 8080
 
-# Set environment variables (if any)
-# ENV EXAMPLE_ENV_VAR value
-
 # Command to run the JAR file
 ENTRYPOINT ["java", "-jar", "app.jar"]
