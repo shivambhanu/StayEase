@@ -7,93 +7,6 @@
 	},
 	"item": [
 		{
-			"name": "Home - CUSTOMER",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjdXN0b21lckBlbWFpbC5jb20iLCJpYXQiOjE3MjIxMzg5NzAsImV4cCI6MTcyMjIyNTM3MH0.v_Up4aUNNTJ_qtfXfDTnBU5y88bdrXIKo47nPV7YePY",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Home - ADMIN",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBlbWFpbC5jb20iLCJpYXQiOjE3MjIxNDAwODEsImV4cCI6MTcyMjIyNjQ4MX0.X2ce4bJND3gDC3ugbAgi8c-ST_n9VgQVlNcScHL60Lk",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/admins",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"admins"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Home - HOTEL_MANAGER",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYW5hZ2VyQGVtYWlsLmNvbSIsImlhdCI6MTcyMjE0MDIwMCwiZXhwIjoxNzIyMjI2NjAwfQ.tR4hX0m5CFUnUr2PFPNgGy5yQ4bi8VzcGPCmTTaEeBw",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/manager",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"manager"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Register CUSTOMER",
 			"request": {
 				"method": "POST",
@@ -178,6 +91,93 @@
 			"response": []
 		},
 		{
+			"name": "Home - CUSTOMER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjdXN0b21lckBlbWFpbC5jb20iLCJpYXQiOjE3MjIzNTgyMjEsImV4cCI6MTcyMzIyMjIyMX0.UB-YizxMiFSSGu2l3NUgz8-VQ7tfJu91MuhxxAlC2Zo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Home - HOTEL_MANAGER",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYW5hZ2VyQGVtYWlsLmNvbSIsImlhdCI6MTcyMjM1ODI0OCwiZXhwIjoxNzIzMjIyMjQ4fQ.TyFJ0m5_LQIvxtg8TYhoz4spSUae3nc0vGkIAoItFOk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/manager",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"manager"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Home - ADMIN",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBlbWFpbC5jb20iLCJpYXQiOjE3MjIzNTgyNjgsImV4cCI6MTcyMzIyMjI2OH0.YSDtqvugEE1XR1Ds2RI9hXeC8ZABWdOV4CWq71x1n38",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admins",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Login - CUSTOMER",
 			"request": {
 				"auth": {
@@ -216,7 +216,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBlbWFpbC5jb20iLCJpYXQiOjE3MjIxNDAwODEsImV4cCI6MTcyMjIyNjQ4MX0.X2ce4bJND3gDC3ugbAgi8c-ST_n9VgQVlNcScHL60Lk",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBlbWFpbC5jb20iLCJpYXQiOjE3MjIzNTgyNjgsImV4cCI6MTcyMzIyMjI2OH0.YSDtqvugEE1XR1Ds2RI9hXeC8ZABWdOV4CWq71x1n38",
 							"type": "string"
 						}
 					]
@@ -225,7 +225,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"hotelName\": \"Mountain Retreat\",\r\n    \"location\": \"Aspen, CO\",\r\n    \"description\": \"A cozy mountain lodge perfect for a relaxing getaway in the Rockies.\",\r\n    \"totalAvailableRooms\": 75\r\n}",
+					"raw": "{\r\n    \"hotelName\": \"Mountain Retreat\",\r\n    \"location\": \"Aspen, CO\",\r\n    \"description\": \"A cozy mountain lodge perfect for a relaxing getaway in the Rockies.\",\r\n    \"totalAvailableRooms\": 10\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -276,7 +276,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYW5hZ2VyQGVtYWlsLmNvbSIsImlhdCI6MTcyMjE0MDIwMCwiZXhwIjoxNzIyMjI2NjAwfQ.tR4hX0m5CFUnUr2PFPNgGy5yQ4bi8VzcGPCmTTaEeBw",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYW5hZ2VyQGVtYWlsLmNvbSIsImlhdCI6MTcyMjM1ODI0OCwiZXhwIjoxNzIzMjIyMjQ4fQ.TyFJ0m5_LQIvxtg8TYhoz4spSUae3nc0vGkIAoItFOk",
 							"type": "string"
 						}
 					]
@@ -305,7 +305,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjdXN0b21lckBlbWFpbC5jb20iLCJpYXQiOjE3MjIxMzg5NzAsImV4cCI6MTcyMjIyNTM3MH0.v_Up4aUNNTJ_qtfXfDTnBU5y88bdrXIKo47nPV7YePY",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjdXN0b21lckBlbWFpbC5jb20iLCJpYXQiOjE3MjIzNTgyMjEsImV4cCI6MTcyMzIyMjIyMX0.UB-YizxMiFSSGu2l3NUgz8-VQ7tfJu91MuhxxAlC2Zo",
 							"type": "string"
 						}
 					]
@@ -336,7 +336,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYW5hZ2VyQGVtYWlsLmNvbSIsImlhdCI6MTcyMjE0MDIwMCwiZXhwIjoxNzIyMjI2NjAwfQ.tR4hX0m5CFUnUr2PFPNgGy5yQ4bi8VzcGPCmTTaEeBw",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYW5hZ2VyQGVtYWlsLmNvbSIsImlhdCI6MTcyMjM1ODI0OCwiZXhwIjoxNzIzMjIyMjQ4fQ.TyFJ0m5_LQIvxtg8TYhoz4spSUae3nc0vGkIAoItFOk",
 							"type": "string"
 						}
 					]
@@ -344,7 +344,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/bookings/2",
+					"raw": "http://localhost:8080/bookings/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -352,7 +352,7 @@
 					"port": "8080",
 					"path": [
 						"bookings",
-						"2"
+						"1"
 					]
 				}
 			},

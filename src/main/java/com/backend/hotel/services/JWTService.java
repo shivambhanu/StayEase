@@ -31,7 +31,7 @@ public class JWTService {
                 .setClaims(additionalClaims)
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + 86400000)) //ONE DAY
+                .setExpiration(new Date(System.currentTimeMillis() + 864000000)) //TEN DAY
                 .signWith(getSignInKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
